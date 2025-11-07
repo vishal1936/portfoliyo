@@ -19,19 +19,41 @@ const projects = [
     link: "https://pokemon-web-gray.vercel.app/",
   },
   {
-    name: "Hospital Mangament",
+    name: "Smartcare Patient Appointmen",
     year: "Jan2025",
     align: "right",
     image: "../../../public/images/website-img-3.jpg",
-    link: "https://hospital-managment-frontand-4sqw.vercel.app",
+    link: "https://smartcare-patient-appointment-syste.vercel.app/",
   },
   {
     name: "Restuarent ERP",
     year: "Mar-2025",
     align: "left",
     image: "../../../public/images/website-img-4.jpg",
-    link: "https://restorent-erp.vercel.app/",
+    link: "https://restropilot-app-v2.vercel.app/",
   },
+  {
+    name: "Real Time chat applicaton",
+    year: "jun-2025",
+    align: "right",
+    image: "../../../public/images/website-img-3.jpg",
+    link: "https://restorent-erp-1vqs.vercel.app/",
+  },
+  {
+    name: "Finwise",
+    year: "Aug-2025",
+    align: "left",
+    image: "../../../public/images/website-img-4.jpg",
+    link: "https://finwise-smart-secure-simple-financi.vercel.app/",
+  },
+  {
+    name: "Ai Fitness",
+    year: "Nov-2025",
+    align: "right",
+    image: "../../../public/images/website-img-4.jpg",
+    link: "https://fitness-alpha-ten.vercel.app/",
+  },
+
 ];
 
 const ProjectsMain = () => {

@@ -9,6 +9,7 @@ import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
 import SubHeroMain from "./components/subHeroSection/SubHeroMain";
+import CertificateMain from "./components/Certification/CertificateMain";
 
 function App() {
   return (
@@ -18,10 +19,13 @@ function App() {
       <HeroGradient />
       <SubHeroMain />
       <AboutMeMain />
+     <ExperienceMain />
+     <ProjectsMain />
       <SkillsMain />
       <SubSkills />
-      <ExperienceMain />
-      <ProjectsMain />
+      
+      
+      <CertificateMain/>
       <ContactMeMain />
       <FooterMain />
     </main>
