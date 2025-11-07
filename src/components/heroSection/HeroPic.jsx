@@ -13,7 +13,7 @@ const HeroPic = () => {
     >
       <img
         // src="../../public/images/HexaPic.png"
-        src="../../../public/images/HexaPic.png"
+        src="/images/HexaPic.png"
         alt="Vishal prajapati"
         className="max-h-[450px] w-auto"
       />
