@@ -2,19 +2,19 @@ import ExperienceInfo from "./ExperienceInfo";
 
 const ExperienceTopLeft = () => {
   return (
-    <div className="flex flex-col gap-6 w-[300px]">
+    <div className="flex flex-col gap-6 w-full max-w-[300px]">
       <p className="text-orange font-bold uppercase text-3xl font-special text-center">
-        Since 2025
+        Since 2024
       </p>
       <div className="flex justify-center items-center gap-4">
-        <ExperienceInfo number="4" text="Month" />
+        <ExperienceInfo end={1} suffix="+" text="Year" />
         <p className="font-bold text-6xl text-lightBrown">-</p>
-        <ExperienceInfo number="4" text="Websites" />
+        <ExperienceInfo end={3} text="Companies" />
       </div>
-      <p className="text-center">
-        With 4 month of experience building dynamic and user-friendly full stack project.
+      <p className="text-center text-lightGrey">
+        1+ year of hands-on experience building scalable, production-grade
+        full stack applications across 3 organizations.
       </p>
-     
     </div>
   );
 };

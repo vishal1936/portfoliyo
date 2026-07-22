@@ -2,15 +2,16 @@ const ExperienceTopRight = () => {
   return (
     <div className="xl:w-[25%] lg:w-[30%] border border-lightBrown p-4 rounded-xl">
       <p className="text-lg text-center text-lightGrey">
-        I am a knowledge on{" "}
+        I have hands-on knowledge of{" "}
         <span className="font-bold text-white">
-          React,Nodejs,Expressjs,Mysql and modern JavaScript
+          React, Node.js, Express.js, MongoDB, PostgreSQL, MySQL and modern
+          JavaScript
         </span>
-        , leveraging best practices to create scalable and maintainable
+        , leveraging best practices to build scalable, maintainable
         solutions. <br />
-        My experience spans working on diverse projects, from small business
-        websites to{" "}
-        
+        My experience spans REST API design, secure authentication, and
+        database optimization — improving system performance by up to{" "}
+        <span className="font-bold text-orange">40%</span>.
       </p>
     </div>
   );

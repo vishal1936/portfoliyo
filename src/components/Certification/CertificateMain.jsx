@@ -1,5 +1,6 @@
 import CertificateText from "./CertificateText";
 import SingleCertificate from "./SingleCertificate";
+import AchievementsStrip from "./AchievementsStrip";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
@@ -76,7 +77,7 @@ const CertificateMain = () => {
         variants={fadeIn("top", 0)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.7 }}
+        viewport={{ once: true, amount: 0.7 }}
       >
         <CertificateText />
       </motion.div>
@@ -94,6 +95,8 @@ const CertificateMain = () => {
           />
         ))}
       </div>
+
+      <AchievementsStrip />
     </div>
   );
 };

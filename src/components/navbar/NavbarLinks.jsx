@@ -4,14 +4,14 @@ const links = [
   { link: "About Me", section: "about" },
   { link: "Skills", section: "skills" },
   { link: "Experience", section: "experience" },
-   { link: "Certification", section: "certificate" },
+  { link: "Certification", section: "certification" },
   { link: "Projects", section: "projects" },
   { link: "Contact", section: "contact" },
 ];
 
 const NavbarLinks = () => {
   return (
-    <ul className="flex lg:flex-row sm:flex-col gap-6 text-white font-body lg:relative sm:absolute sm:top-[120%] text-center left-[50%] -translate-x-[50%] lg:text-md sm:text-xl sm:bg-cyan/30 backdrop-blur-lg lg:bg-black sm:w-full py-4">
+    <ul className="flex lg:flex-row max-lg:flex-col gap-6 text-white font-body lg:relative max-lg:absolute max-lg:top-[120%] text-center left-[50%] -translate-x-[50%] lg:text-md max-lg:text-xl max-lg:bg-[#ffffff] max-lg:backdrop-blur-lg max-lg:w-full max-lg:py-4 max-lg:rounded-2xl max-lg:border max-lg:border-black/5 max-lg:shadow-xl">
       {links.map((link, index) => {
         return (
           <li key={index} className="group">
@@ -21,7 +21,8 @@ const NavbarLinks = () => {
               duration={500}
               offset={-130}
               to={link.section}
-              className="cursor-pointer text-white hover:text-cyan transition-all duration-500"
+              activeClass="active"
+              className="nav-link cursor-pointer text-white hover:text-cyan transition-all duration-500"
             >
               {link.link}
             </Link>

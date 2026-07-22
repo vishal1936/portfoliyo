@@ -1,4 +1,7 @@
 import AboutMeMain from "./components/aboutMeSection/AboutMeMain";
+import AmbientBackground from "./components/AmbientBackground";
+import BackToTop from "./components/BackToTop";
+import ScrollProgress from "./components/ScrollProgress";
 import ContactMeMain from "./components/contactMeSection/ContactMeMain";
 import ExperienceMain from "./components/experienceSection/ExperienceMain";
 import FooterMain from "./components/footer/FooterMain";
@@ -14,20 +17,21 @@ import CertificateMain from "./components/Certification/CertificateMain";
 function App() {
   return (
     <main className="font-body text-white relative overflow-hidden">
+      <ScrollProgress />
+      <AmbientBackground />
       <NavbarMain />
       <HeroMain />
       <HeroGradient />
       <SubHeroMain />
       <AboutMeMain />
-     <ExperienceMain />
-     <ProjectsMain />
+      <ExperienceMain />
+      <ProjectsMain />
       <SkillsMain />
       <SubSkills />
-      
-      
-      <CertificateMain/>
+      <CertificateMain />
       <ContactMeMain />
       <FooterMain />
+      <BackToTop />
     </main>
   );
 }

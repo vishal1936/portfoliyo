@@ -1,7 +1,11 @@
 const ExperienceTopMiddle = () => {
   return (
-    <div className="lg:w-[35%] md:w-[50%] sm:w-[80%]">
-      <img src="/images/experience-image.png" alt="my experience" />
+    <div className="w-[80%] md:w-[50%] lg:w-[35%]">
+      <img
+        src="/images/experience-image.png"
+        alt="my experience"
+        className="drop-shadow-2xl"
+      />
     </div>
   );
 };

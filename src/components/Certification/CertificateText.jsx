@@ -1,12 +1,14 @@
 const CertificateText = () => {
   return (
-    <div className="flex flex-col items-center mt-[100px]">
-      <h2 className="text-6xl text-cyan mb-10">Certifications</h2>
-      <p className="text-lg text-center">
-        I have earned multiple certifications that validate my skills in full
-        stack development, JavaScript, Python, and responsive web design. Each
-        certificate represents practical experience, dedication, and continuous
-        learning toward becoming a professional software developer.
+    <div className="flex flex-col items-center mt-[100px] text-center">
+      <p className="section-eyebrow">Proof Of Work</p>
+      <h2 className="text-4xl sm:text-5xl md:text-6xl text-white mb-4">
+        <span className="text-cyan">Certifications</span> & Achievements
+      </h2>
+      <p className="section-subtext text-center">
+        Certifications that validate my skills in full stack development,
+        JavaScript, Python, and responsive web design — backed by continuous
+        learning and real competitive results.
       </p>
     </div>
   );

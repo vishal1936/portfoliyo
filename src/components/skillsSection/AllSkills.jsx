@@ -1,90 +1,102 @@
-import SingleSkill from "./SingleSkill";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { SiTypescript } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-// import { SiRedux } from "react-icons/si";
-// import { SiNextdotjs } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
-import { FaNodeJs } from "react-icons/fa";             // Node.js
-import { SiExpress } from "react-icons/si";            // Express.js
-import { SiMongodb } from "react-icons/si";            // MongoDB
-import { SiMongoose } from "react-icons/si";           // Mongoose
-import { GrMysql } from "react-icons/gr";              // MySQL
-import { FaGitAlt } from "react-icons/fa";             // Git
-import { FaGithub } from "react-icons/fa";             // GitHub
-            // Vercel
-// import { SiCplusplus } from "react-icons/si";          // C++
-// import { IoLogoJavascript } from "react-icons/io";     // JavaScript
+import { IoLogoJavascript } from "react-icons/io";
+import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import {
+  SiBootstrap,
+  SiExpress,
+  SiMongodb,
+  SiMongoose,
+  SiPostgresql,
+  SiMysql,
+  SiPostman,
+  SiPrisma,
+  SiJsonwebtokens,
+  SiCplusplus,
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { RiLockPasswordLine } from "react-icons/ri";
 
-
-const skills = [
-  
+const categories = [
   {
-    skill: "JavaScript",
-    icon: IoLogoJavascript,
+    title: "Languages",
+    skills: [
+      { name: "JavaScript (ES6+)", icon: IoLogoJavascript },
+      { name: "C++", icon: SiCplusplus },
+    ],
   },
   {
-    skill: "Bootstrap",
-    icon: SiTypescript,
+    title: "Frontend",
+    skills: [
+      { name: "React.js", icon: FaReact },
+      { name: "Tailwind CSS", icon: RiTailwindCssFill },
+      { name: "Bootstrap", icon: SiBootstrap },
+      { name: "HTML5", icon: FaHtml5 },
+      { name: "CSS3", icon: FaCss3Alt },
+    ],
   },
   {
-    skill: "ReactJS",
-    icon: FaReact,
+    title: "Backend",
+    skills: [
+      { name: "Node.js", icon: FaNodeJs },
+      { name: "Express.js", icon: SiExpress },
+      { name: "REST APIs", icon: SiPostman },
+      { name: "JWT Auth", icon: SiJsonwebtokens },
+      { name: "bcrypt", icon: RiLockPasswordLine },
+    ],
   },
   {
-    skill: "Tailwind CSS,",
-    icon: RiTailwindCssFill,
+    title: "Database",
+    skills: [
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "Mongoose", icon: SiMongoose },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "MySQL", icon: SiMysql },
+    ],
   },
   {
-    skill: "NodeJS",
-    icon: FaNodeJs,
-  },
-  {
-    skill: "Expressjs",
-    icon: SiExpress,
-  },
-  {
-    skill: "MongoDb",
-    icon: SiMongodb,
-  },
-  {
-    skill: "MySql",
-    icon: GrMysql,
-  },
-  {
-    skill: "GitHub",
-    icon: FaGithub,
+    title: "Tools",
+    skills: [
+      { name: "Git", icon: FaGitAlt },
+      { name: "GitHub", icon: FaGithub },
+      { name: "Postman", icon: SiPostman },
+      { name: "Prisma ORM", icon: SiPrisma },
+      { name: "VS Code", icon: VscVscode },
+    ],
   },
 ];
 
-
 const AllSkills = () => {
   return (
-    <div>
-      
-      <div className="flex items-center justify-center relative gap-2 max-w-[1200px] mx-auto">
-        {skills.map((item, index) => {
-          return (
-            <motion.div
-              variants={fadeIn("up", `0.${index}`)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0 }}
-              key={index}
-            >
-              <SingleSkill
-                key={index}
-                text={item.skill}
-                imgSvg={<item.icon />}
-              />
-            </motion.div>
-          );
-        })}
-      </div>
+    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
+      {categories.map((category, index) => (
+        <motion.div
+          key={index}
+          variants={fadeIn("up", 0.1 * index)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className="glass-card p-6 hover:border-cyan/40 transition-all duration-500"
+        >
+          <h3 className="text-cyan font-bold text-lg uppercase tracking-wide mb-4">
+            {category.title}
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            {category.skills.map((skill, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-2 hover:border-orange hover:-translate-y-1 transition-all duration-300"
+              >
+                <skill.icon className="text-orange text-lg" />
+                <span className="text-white text-sm font-medium">
+                  {skill.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      ))}
     </div>
   );
 };
